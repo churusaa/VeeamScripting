@@ -32,7 +32,7 @@ Add-PSSnapin VeeamPSSnapin
 # Spaces are fine inside the quotes
 move-item "<Path to original backup Directory>\<Job name>$((get-date).tostring("yyyy-MM-dd"))T*.vbk" -destination "<Path to temporary directory>"\
 
-# ---this is where the code goes that kicks off DailyDuplicate_only_most_recent_full---
+# ---this is where the code goes that kicks off the Files to tape backup job---
 
 Get-VBRTapeJob -name "<Files to Tape Job name>" | Start-VBRJob 
 
